@@ -2,9 +2,19 @@ using UnityEngine;
 
 public class Rooms : Singleton<Rooms>
 {
-    public virtual void Event()
-    {
 
+    [SerializeField]
+    private GameObject _currentCamera;
+
+    public void ZoomIn(GameObject _camera)
+    {
+        _currentCamera = _camera;
+        _currentCamera.SetActive(true);
+    }
+
+    public void ZoomOut()
+    {
+        _currentCamera.SetActive(false);
     }
 
 }

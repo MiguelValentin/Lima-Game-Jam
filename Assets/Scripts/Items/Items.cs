@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PolygonCollider2D), typeof(Sprite))]
-public class Items : MonoBehaviour
+[RequireComponent(typeof(PolygonCollider2D), typeof(Sprite),typeof(Animator))]
+public abstract class Items : MonoBehaviour
 {
-    
 
     [HideInInspector]
     public PolygonCollider2D poly;
@@ -13,11 +12,18 @@ public class Items : MonoBehaviour
     [HideInInspector]
     public Sprite image;
 
+    protected Animator _anim;
     protected virtual void Awake()
     {
         poly = GetComponent<PolygonCollider2D>();
         image = GetComponent<Sprite>();
+        _anim = GetComponent<Animator>();
+
     }
 
-    public virtual void OnMouseDown() { }
+    public virtual void OnMouseDown() {
+        _anim.SetBool("Start", true);
+        poly.enabled = false;
+    
+     }
 }

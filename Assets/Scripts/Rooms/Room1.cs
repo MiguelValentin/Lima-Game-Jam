@@ -12,10 +12,7 @@ public class Room1 : Rooms
     private int _nextRoom = 0;
 
     private AudioSource _audio;
-
-    [SerializeField]
-    private GameObject _camera1;
-
+    
     private void Awake()
     {
         _audio = GetComponent<AudioSource>();
@@ -31,9 +28,5 @@ public class Room1 : Rooms
         }
     }
 
-    public override void Event()
-    {
-        _camera1.SetActive(true);
-    }
 }
 
