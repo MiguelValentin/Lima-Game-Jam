@@ -7,7 +7,7 @@ public abstract class Items : MonoBehaviour
 {
 
     [HideInInspector]
-    public PolygonCollider2D poly;
+    public Collider2D poly;
 
     [HideInInspector]
     public Sprite image;
@@ -15,7 +15,7 @@ public abstract class Items : MonoBehaviour
     protected Animator _anim;
     protected virtual void Awake()
     {
-        poly = GetComponent<PolygonCollider2D>();
+        poly = GetComponent<Collider2D>();
         image = GetComponent<Sprite>();
         _anim = GetComponent<Animator>();
 
