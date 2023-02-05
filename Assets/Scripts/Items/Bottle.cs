@@ -13,5 +13,6 @@ public class Bottle : Items
     {
         base.OnMouseDown();
         _audio.Play();
+        CameraPost.Instance.PostDrunk();
     }
 }

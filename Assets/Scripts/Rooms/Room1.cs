@@ -18,15 +18,7 @@ public class Room1 : Rooms
         _audio = GetComponent<AudioSource>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            _audio.clip = SoundTransition;
-            _audio.Play();
-            GameManager.Instance.ChangeRoom(_nextRoom);
-        }
-    }
+
 
 }
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PolygonCollider2D), typeof(Sprite),typeof(Animator))]
+[RequireComponent(typeof(Collider2D), typeof(Sprite),typeof(Animator))]
 public abstract class Items : MonoBehaviour
 {
 

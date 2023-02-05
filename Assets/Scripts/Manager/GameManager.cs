@@ -24,6 +24,7 @@ public class GameManager : Singleton<GameManager>
         yield return Fade.Instance.FadeOut();
         scene.allowSceneActivation = true;
         yield return Fade.Instance.FadeIn();
+        _isBussy=false;
     }
 
 

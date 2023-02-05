@@ -6,10 +6,11 @@ public class Portrait : Items
     private AudioSource _audio;
 
 
-
     public override void OnMouseDown()
     {
         base.OnMouseDown();
         _audio.Play();
+        CameraPost.Instance.PostNonDrunk();
+        
     }
 }
